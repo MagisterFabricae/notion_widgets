@@ -1,73 +1,75 @@
 <html> 
 <head>
     <title>Date Widget Notion</title> 
-    <style>
+   <style>
       #lbl {
         display: flex;
-        font-family: sans-serif;
+        font-family: Aeonik, sans-serif;
         font-size: 18pt;
-        color: #ff5757;
-        padding: 5px;
+        color: #bebebe;
+        padding: 0px;
         border: none;
-        justify-content: center;
+        justify-content: left;
+        text-align: left;
         line-height: 1.5;
         height:85%;
-        font-weight: bold;
+        font-weight: regular;
         flex-direction: row;
       }
 
       #container {
         display: flex;
-        align-items: flex-start;
+        align-items: left;
       }
 
       #date{
           font-size:12pt;
-          font-weight: bold;
+          font-weight: regular;
       }
 
       body{
-          background-color: rgba(0,0,0,.1);
+          background-color: rgba(0,0,0,0.0);
       }
     </style>
 </head>
 <body>
     <div id="lbl"></div>
 </body>
-
+ 
 <script>
+    
     var weekday = new Array(7);
-    weekday[0] = "domenica";
-    weekday[1] = "lunedì";
-    weekday[2] = "martedì";
-    weekday[3] = "mercoledì";
-    weekday[4] = "giovedì";
-    weekday[5] = "venerdì";
-    weekday[6] = "sabato";
+    weekday[0] = "Domenica";
+    weekday[1] = "Lunedì";
+    weekday[2] = "Martedì";
+    weekday[3] = "Mercoledì";
+    weekday[4] = "Giovedì";
+    weekday[5] = "Venerdì";
+    weekday[6] = "Sabato";
 
-    const monthNames = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
-      "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"
+    const monthNames = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
+      "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
     ];
 
     
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = `${dayOfWeek}, ${today.getDate()} ${monthNames[today.getMonth()]} ${today.getFullYear()}`;
+    var date = `${dayOfWeek}, ${today.getDate()} ${monthNames[today.getMonth()]}`;
 
     var greet;
 
-    if (hrs < 12)
-        greet = 'buon giorno, Alberto  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'buon pomeriggio, Alberto  ';
+    if (hrs < 13)
+        greet = 'Buongiorno';
+    else if (hrs >= 13 && hrs <= 17)
+        greet = 'Buon pomeriggio';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'buona sera, Alberto  ';
-
+        greet = 'Buonasera';
+    
     document.getElementById('lbl').innerHTML = `
         <div class="container">
-          <div id="date"> ${date}</div>
-          <div class="greeting">${greet}</div>
+             <div id="date"> ${date}</div>
+             <div class="greeting">${greet}</div>
         <div/>
     `;
 </script> 
