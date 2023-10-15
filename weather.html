@@ -1,15 +1,10 @@
 <html> 
 <head>
-      <a class="weatherwidget-io" href="https://forecast7.com/it/40d4116d69/bernalda/" data-font="Roboto" data-icons="Climacons" data-mode="Current" data-days="3" data-textcolor="rgba(255, 255, 255, 0)" data-suncolor="#f98629" data-mooncolor="#878686" data-cloudcolor="#878686" data-cloudfill="#f9f7f7" data-raincolor="#1279c2" data-snowcolor="#2acccc" >Bernalda, Province of Matera, Italy</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-    
     <title>Date Widget Notion</title> 
     <style>
       #lbl {
         display: flex;
-        font-family: 'Aeonik'!important, sans-serif;
+        font-family: sans-serif;
         font-size: 18pt;
         color: #bebebe;
         padding: 0px;
@@ -40,6 +35,7 @@
 <body>
     <div id="lbl"></div>
 </body>
+
 <script>
     var weekday = new Array(7);
     weekday[0] = "Domenica";
@@ -62,9 +58,9 @@
 
     var greet;
 
-    if (hrs < 13)
+    if (hrs < 14)
         greet = 'Buongiorno';
-    else if (hrs >= 13 && hrs <= 18)
+    else if (hrs >= 14 && hrs <= 18)
         greet = 'Buon pomeriggio';
     else if (hrs >= 18 && hrs <= 24)
         greet = 'Buonasera';
