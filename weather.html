@@ -66,12 +66,11 @@
     else if (hrs >= 17 && hrs <= 24)
         greet = 'Buonasera';
 
-    var weather = <a class="weatherwidget-io" href="https://forecast7.com/it/40d4116d69/bernalda/" data-font="Roboto" data-icons="Climacons" data-mode="Current" data-days="3" data-textcolor="rgba(255, 255, 255, 0)" data-suncolor="#f98629" data-mooncolor="#878686" data-cloudcolor="#878686" data-cloudfill="#f9f7f7" data-raincolor="#1279c2" data-snowcolor="#2acccc" >Bernalda, Province of Matera, Italy</a>
+    const weather = <a class="weatherwidget-io" href="https://forecast7.com/it/40d4116d69/bernalda/" data-font="Roboto" data-icons="Climacons" data-mode="Current" data-days="3" data-textcolor="rgba(255, 255, 255, 0)" data-suncolor="#f98629" data-mooncolor="#878686" data-cloudcolor="#878686" data-cloudfill="#f9f7f7" data-raincolor="#1279c2" data-snowcolor="#2acccc" >Bernalda, Province of Matera, Italy</a>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
     
     document.getElementById('lbl').innerHTML = `
         <div class="container">
-        <div id="weather"> ${weather}</div>
              <div id="date"> ${date}</div>
              <div class="greeting">${greet}</div>
         <div/>
