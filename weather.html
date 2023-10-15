@@ -9,7 +9,7 @@
     <style>
       #lbl {
         display: flex;
-        font-family: 'Aeonik'!important, sans-serif;
+        font-family: 'Aeonik'!important;
         font-size: 18pt;
         color: #bebebe;
         padding: 0px;
@@ -40,21 +40,18 @@
 <body>
     <div id="lbl"></div>
 </body>
-
-
-    
 <script>
     var weekday = new Array(7);
-    weekday[0] = "domenica";
-    weekday[1] = "lunedì";
-    weekday[2] = "martedì";
-    weekday[3] = "mercoledì";
-    weekday[4] = "giovedì";
-    weekday[5] = "venerdì";
-    weekday[6] = "sabato";
+    weekday[0] = "Domenica";
+    weekday[1] = "Lunedì";
+    weekday[2] = "Martedì";
+    weekday[3] = "Mercoledì";
+    weekday[4] = "Giovedì";
+    weekday[5] = "Venerdì";
+    weekday[6] = "Sabato";
 
-    const monthNames = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
-      "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"
+    const monthNames = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
+      "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
     ];
 
     
@@ -63,7 +60,7 @@
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${today.getDate()} ${monthNames[today.getMonth()]} ${today.getFullYear()}`;
 
-    var greet;
+    #var greet;
 
     if (hrs < 13)
         greet = 'Buongiorno';
@@ -74,12 +71,6 @@
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
-        
-        <a class="weatherwidget-io" href="https://forecast7.com/it/40d4116d69/bernalda/" data-font="Roboto" data-icons="Climacons" data-mode="Current" data-days="3" data-textcolor="rgba(255, 255, 255, 0)" data-suncolor="#f98629" data-mooncolor="#878686" data-cloudcolor="#878686" data-cloudfill="#f9f7f7" data-raincolor="#1279c2" data-snowcolor="#2acccc" >Bernalda, Province of Matera, Italy</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-    
              <div id="date"> ${date}</div>
              <div class="greeting">${greet}</div>
         <div/>
